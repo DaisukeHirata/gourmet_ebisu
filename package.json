@@ -1,7 +1,7 @@
 {
   "name": "gourmet_ebisu",
   "version": "1.8.0",
-  "homepage": "https://github.com/PaulLeCam/react-leaflet",
+  "homepage": "https://daisukehirata.github.io/gourmet_ebisu/",
   "description": "React components for Leaflet maps",
   "main": "lib/index.js",
   "module": "es/index.js",
