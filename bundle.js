@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "19c450a4f01a71b3fc68"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0d6e2fe62da03eeff906"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -17011,13 +17011,7 @@ var App = function App() {
       null,
       '#gourmet_ebisu'
     ),
-    _react2.default.createElement(_simple2.default, null),
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Events'
-    ),
-    _react2.default.createElement(_events2.default, null)
+    _react2.default.createElement(_simple2.default, null)
   );
 };
 
@@ -36146,7 +36140,6 @@ var SimpleExample = function (_Component) {
     fetch('https://4l1yuzvlei.execute-api.ap-northeast-1.amazonaws.com/dev/restaurant-map').then(function (response) {
       return response.json();
     }).then(function (data) {
-      console.log(data);
       _this2.setState({ data: data });
     });
   };
@@ -42847,8 +42840,8 @@ var EventsExample = function (_Component) {
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
       hasLocation: false,
       latlng: {
-        lat: 51.505,
-        lng: -0.09
+        lat: 35.650109,
+        lng: 139.712599
       }
     }, _this.handleClick = function () {
       _this.refs.map.leafletElement.locate();
@@ -42875,6 +42868,8 @@ var EventsExample = function (_Component) {
       )
     ) : null;
 
+    //handleClick();
+
     return _react2.default.createElement(
       _src.Map,
       {
@@ -42883,7 +42878,7 @@ var EventsExample = function (_Component) {
         onClick: this.handleClick,
         onLocationfound: this.handleLocationFound,
         ref: 'map',
-        zoom: 13 },
+        zoom: 16 },
       _react2.default.createElement(_src.TileLayer, {
         attribution: '&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
