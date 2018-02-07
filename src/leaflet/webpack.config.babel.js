@@ -33,7 +33,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
-    contentBase: __dirname + '/dist',
+    contentBase: __dirname,
     historyApiFallback: true,
     hot: true,
     inline: true,
