@@ -9,22 +9,22 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf lib es dist",
-    "build:cjs": "babel src --out-dir lib",
-    "build:es": "cross-env BABEL_ENV=jsnext babel src --out-dir es",
+    "build:cjs": "babel example --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=jsnext babel example --out-dir es",
     "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c",
     "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c",
-    "build:flow": "flow-copy-source src lib && flow-copy-source src es",
+    "build:flow": "flow-copy-source example lib && flow-copy-source example es",
     "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:flow && npm run build:umd && npm run build:umd:min",
     "jest": "cross-env BABEL_ENV=development NODE_ENV=test jest",
     "jest:watch": "cross-env BABEL_ENV=development NODE_ENV=test jest --watch",
-    "lint": "eslint ./src",
+    "lint": "eslint ./example",
     "flow": "flow check",
     "test": "npm run lint && npm run flow && npm run jest",
     "test:watch": "npm run lint && npm run flow && npm run jest:watch",
     "start": "npm run test && npm run build",
     "prepublishOnly": "npm run build",
     "examples": "webpack-dev-server --host 0.0.0.0 --config ./example/webpack.config.babel.js --progress",
-    "deploy": "npm run build && gh-pages -d build -r git@github.com:DaisukeHirata/gourmet_ebisu.git"
+    "deploy": "webpack --config ./example/webpack.config.babel.js && gh-pages -d ./example/dist -r git@github.com:DaisukeHirata/gourmet_ebisu.git"
   },
   "repository": {
     "type": "git",

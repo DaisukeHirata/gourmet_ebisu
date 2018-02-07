@@ -16,9 +16,9 @@ export default {
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: '[name].js',
-    publicPath: 'http://localhost:8000/build',
+    path: __dirname + '/dist',
+    filename: "./bundle.js",
+    publicPath: 'http://localhost:8000/dist',
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({

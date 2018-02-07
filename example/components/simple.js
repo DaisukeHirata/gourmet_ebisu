@@ -20,7 +20,6 @@ export default class SimpleExample extends Component {
     fetch('https://4l1yuzvlei.execute-api.ap-northeast-1.amazonaws.com/dev/restaurant-map')
       .then(response => response.json() )
 		  .then(data => {
-        console.log(data);
 			  this.setState({data: data})
 		  })      
   }  

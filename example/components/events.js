@@ -5,8 +5,8 @@ export default class EventsExample extends Component {
   state = {
     hasLocation: false,
     latlng: {
-      lat: 51.505,
-      lng: -0.09,
+      lat: 35.650109,
+      lng: 139.712599,
     },
   }
 
@@ -30,6 +30,8 @@ export default class EventsExample extends Component {
       </Marker>
     ) : null
 
+    //handleClick();
+
     return (
       <Map
         center={this.state.latlng}
@@ -37,7 +39,7 @@ export default class EventsExample extends Component {
         onClick={this.handleClick}
         onLocationfound={this.handleLocationFound}
         ref="map"
-        zoom={13}>
+        zoom={16}>
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

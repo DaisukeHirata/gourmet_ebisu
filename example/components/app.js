@@ -11,8 +11,6 @@ const App = () => (
   <div>
     <h1>#gourmet_ebisu</h1>
     <SimpleExample />
-    <h2>Events</h2>
-    <EventsExample />
   </div>
 )
 
