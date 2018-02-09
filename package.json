@@ -17,7 +17,7 @@
     "test": "npm run lint && npm run flow && npm run jest",
     "test:watch": "npm run lint && npm run flow && npm run jest:watch",
     "start": "npm run test && npm run build",
-    "dev-server": "webpack-dev-server --host 0.0.0.0 --config ./src/webpack.config.babel.js --progress",
+    "dev-server": "webpack-dev-server --hot --host 0.0.0.0 --config ./src/webpack.config.babel.js --progress",
     "deploy": "npm run build && gh-pages -d ./src/dist -r git@github.com:DaisukeHirata/gourmet_ebisu.git"
   },
   "repository": {

@@ -17,7 +17,7 @@ export default {
   },
   output: {
     path: __dirname + '/dist',
-    filename: "./bundle.js",
+    filename: "bundle.js",
     publicPath: 'http://localhost:8000/dist',
   },
   plugins: [
@@ -33,7 +33,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
-    contentBase: __dirname + '/dist',
+    contentBase: __dirname,
     historyApiFallback: true,
     hot: true,
     inline: true,

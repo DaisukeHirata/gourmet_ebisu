@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0d6e2fe62da03eeff906"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6504afb27e453065327d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -36102,7 +36102,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _src = __webpack_require__(67);
+var _leaflet = __webpack_require__(67);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36151,10 +36151,10 @@ var SimpleExample = function (_Component) {
     var position = [this.state.lat, this.state.lng];
     var markers = features.map(function (feature, i) {
       return _react2.default.createElement(
-        _src.Marker,
+        _leaflet.Marker,
         { key: i, position: feature.geometry.coordinates },
         _react2.default.createElement(
-          _src.Popup,
+          _leaflet.Popup,
           null,
           _react2.default.createElement(
             'span',
@@ -36183,9 +36183,9 @@ var SimpleExample = function (_Component) {
     });
 
     return _react2.default.createElement(
-      _src.Map,
+      _leaflet.Map,
       { center: position, zoom: this.state.zoom },
-      _react2.default.createElement(_src.TileLayer, {
+      _react2.default.createElement(_leaflet.TileLayer, {
         attribution: '&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       }),
@@ -42813,7 +42813,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _src = __webpack_require__(67);
+var _leaflet = __webpack_require__(67);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42855,10 +42855,10 @@ var EventsExample = function (_Component) {
 
   EventsExample.prototype.render = function render() {
     var marker = this.state.hasLocation ? _react2.default.createElement(
-      _src.Marker,
+      _leaflet.Marker,
       { position: this.state.latlng },
       _react2.default.createElement(
-        _src.Popup,
+        _leaflet.Popup,
         null,
         _react2.default.createElement(
           'span',
@@ -42871,7 +42871,7 @@ var EventsExample = function (_Component) {
     //handleClick();
 
     return _react2.default.createElement(
-      _src.Map,
+      _leaflet.Map,
       {
         center: this.state.latlng,
         length: 4,
@@ -42879,7 +42879,7 @@ var EventsExample = function (_Component) {
         onLocationfound: this.handleLocationFound,
         ref: 'map',
         zoom: 16 },
-      _react2.default.createElement(_src.TileLayer, {
+      _react2.default.createElement(_leaflet.TileLayer, {
         attribution: '&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       }),
